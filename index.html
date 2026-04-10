@@ -1152,6 +1152,8 @@ a:hover { color: var(--jaune); }
   .btn { width: 100%; justify-content: center; }
 }
 </style>
+<link rel="preload" as="image" href="/images/hero.jpg" fetchpriority="high">
+<!--email_off-->
 </head>
 
 <body>
@@ -1191,6 +1193,7 @@ a:hover { color: var(--jaune); }
   </nav>
 </header>
 
+<main>
 <!-- ===== HERO ===== -->
 <section class="hero">
   <div class="hero-bg"></div>
@@ -1705,6 +1708,8 @@ a:hover { color: var(--jaune); }
   </div>
 </section>
 
+</main>
+
 <!-- ===== FOOTER ===== -->
 <footer class="site-footer">
   <div class="container">
@@ -1763,6 +1768,7 @@ document.querySelectorAll('a[href^="#"]').forEach(a => {
   });
 });
 </script>
+<!--/email_off-->
 
 </body>
 </html>
