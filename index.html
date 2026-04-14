@@ -44,10 +44,10 @@
     "@type": "OfferCatalog",
     "name": "Catalogue parapluies en gros",
     "itemListElement": [
-      {"@type": "Offer", "itemOffered": {"@type": "Product", "name": "Parapluie inversé double toile en gros", "description": "Ouverture inversée, double couche, poignée ergonomique en C, système anti-goutte — tarif sur devis, remise volume", "offers": {"@type": "Offer", "price": "8.90", "priceCurrency": "EUR", "priceValidUntil": "2027-12-31", "availability": "https://schema.org/InStock", "url": "https://grossiste-parapluie.fr/#gammes"}}},
-      {"@type": "Offer", "itemOffered": {"@type": "Product", "name": "Parapluie classique pliant automatique", "description": "Ouverture/fermeture auto, 8 baleines fibre, housse assortie — tarif sur devis, remise volume", "offers": {"@type": "Offer", "price": "4.50", "priceCurrency": "EUR", "priceValidUntil": "2027-12-31", "availability": "https://schema.org/InStock", "url": "https://grossiste-parapluie.fr/#gammes"}}},
-      {"@type": "Offer", "itemOffered": {"@type": "Product", "name": "Parapluie golf grand format", "description": "Diamètre 130cm, double aération, manche fibre de verre — tarif sur devis, remise volume", "offers": {"@type": "Offer", "price": "12.50", "priceCurrency": "EUR", "priceValidUntil": "2027-12-31", "availability": "https://schema.org/InStock", "url": "https://grossiste-parapluie.fr/#gammes"}}},
-      {"@type": "Offer", "itemOffered": {"@type": "Product", "name": "Parapluie personnalisable marquage logo", "description": "Sérigraphie, transfert ou sublimation, dès 100 pièces — tarif sur devis selon technique", "offers": {"@type": "Offer", "price": "6.90", "priceCurrency": "EUR", "priceValidUntil": "2027-12-31", "availability": "https://schema.org/InStock", "url": "https://grossiste-parapluie.fr/#gammes"}}}
+      {"@type": "Offer", "itemOffered": {"@type": "Product", "name": "Parapluie inversé double toile en gros", "description": "Ouverture inversée, double couche, poignée ergonomique en C, système anti-goutte — tarif sur devis, remise volume", "image": "https://grossiste-parapluie.fr/images/hero.jpg", "offers": {"@type": "Offer", "price": "8.90", "priceCurrency": "EUR", "priceValidUntil": "2027-12-31", "availability": "https://schema.org/InStock", "url": "https://grossiste-parapluie.fr/#gammes"}}},
+      {"@type": "Offer", "itemOffered": {"@type": "Product", "name": "Parapluie classique pliant automatique", "description": "Ouverture/fermeture auto, 8 baleines fibre, housse assortie — tarif sur devis, remise volume", "image": "https://grossiste-parapluie.fr/images/hero.jpg", "offers": {"@type": "Offer", "price": "4.50", "priceCurrency": "EUR", "priceValidUntil": "2027-12-31", "availability": "https://schema.org/InStock", "url": "https://grossiste-parapluie.fr/#gammes"}}},
+      {"@type": "Offer", "itemOffered": {"@type": "Product", "name": "Parapluie golf grand format", "description": "Diamètre 130cm, double aération, manche fibre de verre — tarif sur devis, remise volume", "image": "https://grossiste-parapluie.fr/images/hero.jpg", "offers": {"@type": "Offer", "price": "12.50", "priceCurrency": "EUR", "priceValidUntil": "2027-12-31", "availability": "https://schema.org/InStock", "url": "https://grossiste-parapluie.fr/#gammes"}}},
+      {"@type": "Offer", "itemOffered": {"@type": "Product", "name": "Parapluie personnalisable marquage logo", "description": "Sérigraphie, transfert ou sublimation, dès 100 pièces — tarif sur devis selon technique", "image": "https://grossiste-parapluie.fr/images/hero.jpg", "offers": {"@type": "Offer", "price": "6.90", "priceCurrency": "EUR", "priceValidUntil": "2027-12-31", "availability": "https://schema.org/InStock", "url": "https://grossiste-parapluie.fr/#gammes"}}}
     ]
   },
   "aggregateRating": {
@@ -1663,7 +1663,11 @@ a:hover { color: var(--jaune); }
         </div>
       </div>
 
-      <form class="contact-form" action="mailto:adv@grossiste-parapluie.fr" method="POST" enctype="text/plain">
+      <form class="contact-form" id="contact-form">
+        <input type="hidden" name="_subject" value="Demande de devis — grossiste parapluie">
+        <input type="hidden" name="_honeypot" value="">
+        <input type="hidden" name="_captcha" value="false">
+        <input type="hidden" name="_template" value="table">
         <div class="form-row">
           <div class="form-group">
             <label for="name">Nom / Société</label>
@@ -1704,6 +1708,12 @@ a:hover { color: var(--jaune); }
           <button type="submit" class="btn btn-primary">Envoyer la demande</button>
         </div>
       </form>
+      <div id="form-success" style="display:none;padding:18px 20px;background:#f0fdf4;border:1px solid #86efac;border-radius:8px;color:#166534;margin-top:16px;font-weight:500;font-size:.95rem;">
+        ✓ Votre demande a bien été envoyée. Nous vous répondrons sous 24h ouvrées.
+      </div>
+      <div id="form-error" style="display:none;padding:18px 20px;background:#fef2f2;border:1px solid #fca5a5;border-radius:8px;color:#991b1b;margin-top:16px;font-size:.95rem;">
+        ✗ Une erreur est survenue. Veuillez réessayer ou nous contacter directement par email.
+      </div>
     </div>
   </div>
 </section>
@@ -1770,5 +1780,53 @@ document.querySelectorAll('a[href^="#"]').forEach(a => {
 </script>
 <!--/email_off-->
 
+
+<script>
+/* Formsubmit AJAX handler — auto-generated */
+(function () {
+  const form = document.querySelector('.contact-form');
+  if (!form) return;
+
+  // Bloquer la soumission native (honeypot + AJAX)
+  form.setAttribute('novalidate', '');
+
+  form.addEventListener('submit', async function (e) {
+    e.preventDefault();
+
+    // Validation HTML5 manuelle
+    if (!form.checkValidity()) { form.reportValidity(); return; }
+
+    const btn = form.querySelector('[type="submit"]');
+    const origText = btn.textContent;
+    btn.textContent = 'Envoi en cours…';
+    btn.disabled = true;
+
+    const successEl = document.getElementById('form-success');
+    const errorEl   = document.getElementById('form-error');
+    if (errorEl) errorEl.style.display = 'none';
+
+    try {
+      const data = new FormData(form);
+      const res = await fetch('https://formsubmit.co/ajax/contact@le-reve-de-noel.com', {
+        method: 'POST',
+        headers: { Accept: 'application/json' },
+        body: data,
+      });
+      const json = await res.json();
+      if (json.success === 'true' || json.success === true) {
+        form.reset();
+        form.style.display = 'none';
+        if (successEl) successEl.style.display = 'block';
+      } else {
+        throw new Error('Formsubmit non-success');
+      }
+    } catch (err) {
+      btn.textContent = origText;
+      btn.disabled = false;
+      if (errorEl) errorEl.style.display = 'block';
+    }
+  });
+})();
+</script>
 </body>
 </html>
