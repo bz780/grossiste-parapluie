@@ -1154,6 +1154,7 @@ a:hover { color: var(--jaune); }
 </style>
 <link rel="preload" as="image" href="/images/hero.jpg" fetchpriority="high">
 <!--email_off-->
+  <script src="https://challenges.cloudflare.com/turnstile/v0/api.js" defer></script>
 </head>
 
 <body>
@@ -1663,7 +1664,13 @@ a:hover { color: var(--jaune); }
         </div>
       </div>
 
-      <form class="contact-form" id="contact-form">
+      <form class="contact-form" id="contact-form" novalidate>
+<input type="hidden" name="_subject" value="Demande devis — grossiste parapluie">
+<input type="hidden" name="_honeypot" value="">
+<input type="hidden" name="_captcha" value="false">
+<input type="hidden" name="_template" value="table">
+<input type="text" name="_gotcha" style="display:none !important;position:absolute;left:-9999px" tabindex="-1" autocomplete="off" aria-hidden="true">
+<input type="hidden" name="_form_started_at" value="">
         <input type="hidden" name="_subject" value="Demande de devis — grossiste parapluie">
         <input type="hidden" name="_honeypot" value="">
         <input type="hidden" name="_captcha" value="false">
@@ -1705,7 +1712,9 @@ a:hover { color: var(--jaune); }
           </div>
         </div>
         <div class="form-submit">
-          <button type="submit" class="btn btn-primary">Envoyer la demande</button>
+          
+<div class="cf-turnstile" data-sitekey="0x4AAAAAADFQDxo7YCVsY9Ds" data-theme="light" data-size="flexible" style="margin:14px 0"></div>
+<button type="submit" class="btn btn-primary">Envoyer la demande</button>
         </div>
       </form>
       <div id="form-success" style="display:none;padding:18px 20px;background:#f0fdf4;border:1px solid #86efac;border-radius:8px;color:#166534;margin-top:16px;font-weight:500;font-size:.95rem;">
@@ -1782,18 +1791,42 @@ document.querySelectorAll('a[href^="#"]').forEach(a => {
 
 
 <script>
-/* Formsubmit AJAX handler — auto-generated */
+/* Formsubmit AJAX handler — v2 (turnstile+timing) */
 (function () {
   const form = document.querySelector('.contact-form');
   if (!form) return;
-
-  // Bloquer la soumission native (honeypot + AJAX)
   form.setAttribute('novalidate', '');
+
+  const formStartTime = Date.now();
+  const tsField = form.querySelector('input[name="_form_started_at"]');
+  if (tsField) tsField.value = String(formStartTime);
 
   form.addEventListener('submit', async function (e) {
     e.preventDefault();
 
-    // Validation HTML5 manuelle
+    // Anti-bot : timing
+    if (Date.now() - formStartTime < 2000) {
+      // bot probable, ignorer silencieusement
+      return;
+    }
+
+    // Anti-bot : honeypot _gotcha
+    const gotcha = form.querySelector('input[name="_gotcha"]');
+    if (gotcha && gotcha.value) return;
+
+    // Anti-bot : Turnstile token
+    const tsResp = form.querySelector('[name="cf-turnstile-response"]');
+    if (!tsResp || !tsResp.value) {
+      const errorEl = document.getElementById('form-error');
+      if (errorEl) {
+        errorEl.textContent = '✗ Veuillez compléter la vérification anti-robot avant d\'envoyer.';
+        errorEl.style.display = 'block';
+      } else {
+        alert('Veuillez compléter la vérification anti-robot.');
+      }
+      return;
+    }
+
     if (!form.checkValidity()) { form.reportValidity(); return; }
 
     const btn = form.querySelector('[type="submit"]');
@@ -1827,7 +1860,6 @@ document.querySelectorAll('a[href^="#"]').forEach(a => {
       if (errorEl) errorEl.style.display = 'block';
     }
   });
-})();
-</script>
+})();</script>
 </body>
 </html>
