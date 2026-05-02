@@ -629,6 +629,23 @@ a:hover { color: var(--jaune); }
   font-size: 0.95rem;
 }
 
+.filter-bar { background: var(--blanc-pur); border: 1px solid #e5e7eb; border-radius: 12px; padding: 18px 20px; margin-bottom: 32px; display: grid; grid-template-columns: repeat(4, 1fr) auto; gap: 16px; align-items: end; box-shadow: 0 2px 12px rgba(0,0,0,.06); }
+.filter-group { display: flex; flex-direction: column; gap: 6px; min-width: 0; }
+.filter-group label { font-size: .72rem; text-transform: uppercase; letter-spacing: .05em; color: var(--gris-moyen); font-weight: 700; }
+.filter-group select { width: 100%; padding: 9px 12px; border: 1px solid #e5e7eb; border-radius: 6px; background: var(--blanc-pur); font-size: .9rem; color: var(--bleu); cursor: pointer; font-family: inherit; }
+.filter-group select:focus { outline: 2px solid var(--bleu); outline-offset: 1px; }
+.filter-group option:disabled { color: #bbb; }
+.filter-actions { display: flex; flex-direction: column; gap: 6px; align-items: stretch; }
+.filter-count { font-size: .8rem; color: var(--gris); white-space: nowrap; text-align: center; }
+.filter-reset { background: rgba(44,62,107,.06); color: var(--bleu-deep); border: 1px solid var(--bleu); padding: 9px 14px; border-radius: 6px; font-size: .85rem; cursor: pointer; font-family: inherit; transition: background .2s; white-space: nowrap; }
+.filter-reset:hover { background: var(--bleu); color: var(--blanc-pur); }
+.filter-empty { text-align: center; padding: 50px 20px; background: var(--blanc-pur); border: 1px dashed #e5e7eb; border-radius: 12px; color: var(--gris); display: none; }
+.filter-empty a { color: var(--bleu); font-weight: 600; }
+.gamme-card.is-hidden, .gammes-row-featured.is-hidden, .gammes-row-three.is-hidden, .gammes-row-two.is-hidden { display: none; }
+@media (max-width: 768px) {
+  .filter-bar { grid-template-columns: 1fr 1fr; }
+  .filter-actions { grid-column: span 2; flex-direction: row; justify-content: space-between; align-items: center; }
+}
 .gamme-price span {
   color: var(--gris-moyen);
   font-weight: 400;
@@ -1277,10 +1294,58 @@ a:hover { color: var(--jaune); }
       <p>Sept familles de produits pour couvrir tous vos besoins, du modèle économique au haut de gamme personnalisable.</p>
     </div>
 
-    <div class="gammes-layout">
+    <div class="filter-bar" id="filter-bar">
+      <div class="filter-group">
+        <label for="f-type">Type</label>
+        <select id="f-type" data-filter="type">
+          <option value="">Tous</option>
+          <option value="compact">Compact / pliant</option>
+          <option value="standard">Standard</option>
+          <option value="golf">Golf / grand format</option>
+          <option value="tempete">Tempete</option>
+          <option value="enfant">Enfant</option>
+        </select>
+      </div>
+      <div class="filter-group">
+        <label for="f-matiere">Matiere toile</label>
+        <select id="f-matiere" data-filter="matiere">
+          <option value="">Toutes</option>
+          <option value="polyester">Polyester</option>
+          <option value="pongee">Pongee</option>
+          <option value="eva">EVA / PVC</option>
+          <option value="coton">Coton</option>
+        </select>
+      </div>
+      <div class="filter-group">
+        <label for="f-moq">MOQ</label>
+        <select id="f-moq" data-filter="moq">
+          <option value="">Tous</option>
+          <option value="50">Des 50 pcs</option>
+          <option value="100">Des 100 pcs</option>
+          <option value="250">Des 250 pcs</option>
+          <option value="500">Des 500 pcs</option>
+        </select>
+      </div>
+      <div class="filter-group">
+        <label for="f-prix">Prix HT</label>
+        <select id="f-prix" data-filter="prix">
+          <option value="">Tous</option>
+          <option value="lt3">Moins de 3 EUR</option>
+          <option value="3-6">3 a 6 EUR</option>
+          <option value="6-12">6 a 12 EUR</option>
+          <option value="gt12">Plus de 12 EUR</option>
+        </select>
+      </div>
+      <div class="filter-actions">
+        <span class="filter-count" id="filter-count">8 / 8 gammes</span>
+        <button type="button" class="filter-reset" id="filter-reset">Reinitialiser</button>
+      </div>
+    </div>
+    <div class="filter-empty" id="filter-empty">Aucune gamme ne correspond a votre selection. <a href="#" id="filter-empty-reset">Reinitialiser les filtres</a></div>
+    <div class="gammes-layout" id="gammes-layout">
       <!-- Row 1: Featured inversé + 2 stacked -->
       <div class="gammes-row-featured">
-        <div class="gamme-card">
+        <div class="gamme-card" data-type="standard,tempete" data-matiere="polyester,pongee" data-moq="100" data-prix="6-12">
           <div class="gamme-card-img">
             <img src="images/strip2.jpg" alt="Parapluie inversé double toile reverse umbrella en gros" width="900" height="600" loading="lazy">
           </div>
@@ -1292,7 +1357,7 @@ a:hover { color: var(--jaune); }
           </div>
         </div>
 
-        <div class="gamme-card">
+        <div class="gamme-card" data-type="compact,standard" data-matiere="polyester,pongee" data-moq="50" data-prix="lt3">
           <div class="gamme-card-img">
             <img src="images/strip4.jpg" alt="Parapluie classique pliant canne automatique grossiste" width="900" height="600" loading="lazy">
           </div>
@@ -1304,7 +1369,7 @@ a:hover { color: var(--jaune); }
           </div>
         </div>
 
-        <div class="gamme-card">
+        <div class="gamme-card" data-type="golf,standard" data-matiere="polyester,pongee" data-moq="250" data-prix="6-12">
           <div class="gamme-card-img">
             <img src="images/chinese.jpg" alt="Parapluie golf grand format 130cm grossiste" width="900" height="600" loading="lazy">
           </div>
@@ -1319,7 +1384,7 @@ a:hover { color: var(--jaune); }
 
       <!-- Row 2: Three equal -->
       <div class="gammes-row-three">
-        <div class="gamme-card">
+        <div class="gamme-card" data-type="compact,standard,golf" data-matiere="polyester" data-moq="100" data-prix="3-6">
           <div class="gamme-card-img">
             <img src="images/lots.jpg" alt="Parapluie personnalisable marquage logo entreprise" width="900" height="600" loading="lazy">
           </div>
@@ -1331,7 +1396,7 @@ a:hover { color: var(--jaune); }
           </div>
         </div>
 
-        <div class="gamme-card">
+        <div class="gamme-card" data-type="standard" data-matiere="eva" data-moq="50" data-prix="3-6">
           <div class="gamme-card-img">
             <img src="images/strip3.jpg" alt="Parapluie transparent cloche mode tendance" width="900" height="600" loading="lazy">
           </div>
@@ -1343,7 +1408,7 @@ a:hover { color: var(--jaune); }
           </div>
         </div>
 
-        <div class="gamme-card">
+        <div class="gamme-card" data-type="enfant" data-matiere="polyester" data-moq="50" data-prix="lt3">
           <div class="gamme-card-img">
             <img src="images/love.jpg" alt="Parapluie enfant motifs animaux couleurs vives" width="900" height="600" loading="lazy">
           </div>
@@ -1358,7 +1423,7 @@ a:hover { color: var(--jaune); }
 
       <!-- Row 3: Two wide -->
       <div class="gammes-row-two">
-        <div class="gamme-card">
+        <div class="gamme-card" data-type="tempete,golf,standard" data-matiere="polyester,pongee" data-moq="500" data-prix="6-12">
           <div class="gamme-card-img">
             <img src="images/rainy.jpg" alt="Parapluie tempête anti-vent résistant fibres renforcées" width="900" height="600" loading="lazy">
           </div>
@@ -1370,7 +1435,7 @@ a:hover { color: var(--jaune); }
           </div>
         </div>
 
-        <div class="gamme-card">
+        <div class="gamme-card" data-type="golf,standard" data-matiere="coton,polyester" data-moq="100" data-prix="gt12">
           <div class="gamme-card-img">
             <img src="images/rainy.jpg" alt="Parapluie de berger grand format traditionnel" width="900" height="600" loading="lazy">
           </div>
@@ -1922,5 +1987,68 @@ document.querySelectorAll('a[href^="#"]').forEach(a => {
     }
   });
 })();</script>
+<script>
+/* ===== Filtres transverses ===== */
+(function(){
+  var bar = document.getElementById('filter-bar');
+  var layout = document.getElementById('gammes-layout');
+  if (!bar || !layout) return;
+  var cards = Array.prototype.slice.call(layout.querySelectorAll('.gamme-card'));
+  var rows = Array.prototype.slice.call(layout.querySelectorAll('.gammes-row-featured, .gammes-row-three, .gammes-row-two'));
+  var selects = Array.prototype.slice.call(bar.querySelectorAll('select[data-filter]'));
+  var countEl = document.getElementById('filter-count');
+  var emptyEl = document.getElementById('filter-empty');
+  var resetBtn = document.getElementById('filter-reset');
+  var emptyResetLink = document.getElementById('filter-empty-reset');
+  var totalCards = cards.length;
+  function cardValues(card, key){
+    var raw = card.getAttribute('data-' + key) || '';
+    return raw.split(',').map(function(s){ return s.trim(); }).filter(Boolean);
+  }
+  function cardMatches(card, filters){
+    for (var key in filters){ var v = filters[key]; if (!v) continue; if (cardValues(card, key).indexOf(v) === -1) return false; }
+    return true;
+  }
+  function getActiveFilters(){ var f = {}; selects.forEach(function(sel){ f[sel.dataset.filter] = sel.value; }); return f; }
+  function apply(){
+    var filters = getActiveFilters();
+    var visible = 0;
+    cards.forEach(function(card){
+      if (cardMatches(card, filters)){ card.classList.remove('is-hidden'); visible++; }
+      else card.classList.add('is-hidden');
+    });
+    rows.forEach(function(row){
+      var hasVisible = Array.prototype.slice.call(row.querySelectorAll('.gamme-card')).some(function(c){ return !c.classList.contains('is-hidden'); });
+      row.classList.toggle('is-hidden', !hasVisible);
+    });
+    countEl.textContent = visible + ' / ' + totalCards + ' gammes';
+    emptyEl.style.display = visible === 0 ? 'block' : 'none';
+    layout.style.display = visible === 0 ? 'none' : '';
+    selects.forEach(function(sel){
+      var key = sel.dataset.filter, current = sel.value;
+      Array.prototype.slice.call(sel.options).forEach(function(opt){
+        var lbl = opt.dataset.baseLabel || opt.textContent.replace(/\s*\(\d+\)\s*$/, '');
+        opt.dataset.baseLabel = lbl;
+        if (!opt.value){
+          var others = {}; for (var k in filters){ if (k !== key) others[k] = filters[k]; }
+          var n = cards.filter(function(c){ return cardMatches(c, others); }).length;
+          opt.textContent = lbl + ' (' + n + ')';
+        } else {
+          var test = {}; for (var k2 in filters){ test[k2] = filters[k2]; }
+          test[key] = opt.value;
+          var n2 = cards.filter(function(c){ return cardMatches(c, test); }).length;
+          opt.textContent = lbl + ' (' + n2 + ')';
+          opt.disabled = (n2 === 0 && opt.value !== current);
+        }
+      });
+    });
+  }
+  function reset(){ selects.forEach(function(sel){ sel.value = ''; }); apply(); }
+  selects.forEach(function(sel){ sel.addEventListener('change', apply); });
+  resetBtn.addEventListener('click', reset);
+  if (emptyResetLink) emptyResetLink.addEventListener('click', function(e){ e.preventDefault(); reset(); });
+  apply();
+})();
+</script>
 </body>
 </html>
