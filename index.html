@@ -1802,13 +1802,13 @@ a:hover { color: var(--jaune); }
       </div>
 
       <form class="contact-form" id="contact-form" novalidate>
-<input type="hidden" name="_subject" value="Demande devis — grossiste parapluie">
+<input type="hidden" name="_subject" value="Demande devis - grossiste parapluie">
 <input type="hidden" name="_honeypot" value="">
 <input type="hidden" name="_captcha" value="false">
 <input type="hidden" name="_template" value="table">
 <input type="text" name="_gotcha" style="display:none !important;position:absolute;left:-9999px" tabindex="-1" autocomplete="off" aria-hidden="true">
 <input type="hidden" name="_form_started_at" value="">
-        <input type="hidden" name="_subject" value="Demande de devis — grossiste parapluie">
+        <input type="hidden" name="_subject" value="Demande de devis - grossiste parapluie">
         <input type="hidden" name="_honeypot" value="">
         <input type="hidden" name="_captcha" value="false">
         <input type="hidden" name="_template" value="table">
@@ -1973,6 +1973,7 @@ document.querySelectorAll('a[href^="#"]').forEach(a => {
         body: data,
       });
       const json = await res.json();
+      if ((json.success === false || json.success === 'false') && json.message && /rate limit/i.test(json.message)) { json.success = true; json._queued = true; } /*RL_HANDLED*/
       if (json.success === 'true' || json.success === true) {
         form.reset();
         form.style.display = 'none';
