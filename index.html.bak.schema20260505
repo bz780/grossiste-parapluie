@@ -17,7 +17,113 @@
 <link rel="shortcut icon" href="/favicon.svg">
 
 <script type="application/ld+json">
-{"@context":"https://schema.org","@graph":[{"@type":"CollectionPage","@id":"https://www.grossiste-parapluie.fr/#collection","url":"https://www.grossiste-parapluie.fr/","name":"Parapluies en gros :classiques, inversés&amp; personnalisables","inLanguage":"fr-FR","isPartOf":{"@id":"https://www.grossiste-parapluie.fr/#website"},"dateModified":"2026-05-12"},{"@type":"Organization","@id":"https://grossiste-parapluie.fr/#organization","name":"Grossiste Parapluie","url":"https://grossiste-parapluie.fr","logo":"https://grossiste-parapluie.fr/favicon.svg","image":"https://grossiste-parapluie.fr/images/hero.jpg","description":"Grossiste parapluie B2B en France. Inversés, golf, pliants automatiques, personnalisables marquage logo — 5 000 pièces en stock, prix dégressifs dès 50 pièces, livraison 24-72h.","telephone":"+33756952929","email":"contact@grossiste-parapluie.fr","foundingDate":"2014","numberOfEmployees":{"@type":"QuantitativeValue","value":7,"dateModified":"2026-05-12"},"address":{"@type":"PostalAddress","addressCountry":"FR","addressRegion":"Île-de-France"},"areaServed":[{"@type":"Country","name":"France"},{"@type":"Country","name":"Belgique"},{"@type":"Country","name":"Suisse"},{"@type":"Country","name":"Luxembourg"}],"contactPoint":[{"@type":"ContactPoint","contactType":"sales","telephone":"+33756952929","email":"contact@grossiste-parapluie.fr","areaServed":"FR","availableLanguage":["French"]},{"@type":"ContactPoint","contactType":"customer service","email":"contact@grossiste-parapluie.fr","areaServed":["FR","BE","CH","LU"],"availableLanguage":["French"]}],"makesOffer":{"@type":"Offer","itemOffered":{"@type":"Service","name":"Vente de parapluies en gros B2B","serviceType":"Wholesale"}},"knowsAbout":["Parapluie inversé","Parapluie golf","Parapluie pliant automatique","Personnalisation parapluie sérigraphie","Sublimation textile","Marquage logo entreprise"],"aggregateRating":{"@type":"AggregateRating","ratingValue":"4.7","reviewCount":"640","bestRating":"5","worstRating":"1"}},{"@type":"WebSite","@id":"https://grossiste-parapluie.fr/#website","url":"https://grossiste-parapluie.fr/","name":"Grossiste Parapluie","description":"Fournisseur de parapluies B2B en gros — inversés, golf, pliants, personnalisables","inLanguage":"fr-FR","publisher":{"@id":"https://grossiste-parapluie.fr/#organization"},"potentialAction":{"@type":"SearchAction","target":"https://grossiste-parapluie.fr/#gammes","query-input":"required name=search_term_string"}},{"@type":"WebPage","@id":"https://grossiste-parapluie.fr/#webpage","url":"https://grossiste-parapluie.fr/","name":"Grossiste parapluie B2B — vente en gros pour pros","isPartOf":{"@id":"https://grossiste-parapluie.fr/#website"},"about":{"@id":"https://grossiste-parapluie.fr/#organization"},"breadcrumb":{"@id":"https://grossiste-parapluie.fr/#breadcrumb"},"inLanguage":"fr-FR"},{"@type":"BreadcrumbList","@id":"https://grossiste-parapluie.fr/#breadcrumb","itemListElement":[{"@type":"ListItem","position":1,"name":"Accueil","item":"https://grossiste-parapluie.fr/"},{"@type":"ListItem","position":2,"name":"Catalogue grossiste","item":"https://grossiste-parapluie.fr/#gammes"}]},{"@type":"OfferCatalog","@id":"https://grossiste-parapluie.fr/#catalog","name":"Catalogue Grossiste Parapluie B2B","itemListElement":[{"@type":"OfferCatalog","name":"Parapluies inversés et reverse","numberOfItems":800},{"@type":"OfferCatalog","name":"Parapluies golf grand format","numberOfItems":1200},{"@type":"OfferCatalog","name":"Parapluies pliants automatiques","numberOfItems":1800},{"@type":"OfferCatalog","name":"Parapluies personnalisables marquage logo","numberOfItems":1200}]},{"@type":"Service","@id":"https://grossiste-parapluie.fr/#service-perso","name":"Personnalisation et marquage logo entreprise","serviceType":"Personnalisation textile B2B","description":"Sérigraphie 1-4 couleurs, transfert numérique photos/dégradés, sublimation toute surface. Marquage dès 100 pièces.","provider":{"@id":"https://grossiste-parapluie.fr/#organization"},"areaServed":[{"@type":"Country","name":"France"},{"@type":"Country","name":"Belgique"},{"@type":"Country","name":"Suisse"},{"@type":"Country","name":"Luxembourg"}],"offers":{"@type":"Offer","availability":"https://schema.org/InStock","priceCurrency":"EUR","eligibleQuantity":{"@type":"QuantitativeValue","minValue":100,"unitText":"pièces"}}},{"@type":"Product","@id":"https://grossiste-parapluie.fr/#prod-inverse","name":"Parapluie inversé double toile en gros","description":"Ouverture inversée, double couche, poignée ergonomique en C, système anti-goutte. Tient debout fermé, libère les mains.","image":"https://grossiste-parapluie.fr/images/hero.jpg","sku":"GPP-INV-DT","mpn":"PARA-INV-2026","category":"Inversés","brand":{"@type":"Brand","name":"Grossiste Parapluie"},"manufacturer":{"@id":"https://grossiste-parapluie.fr/#organization"},"offers":{"@type":"AggregateOffer","priceCurrency":"EUR","lowPrice":"4.20","highPrice":"12.00","offerCount":18,"availability":"https://schema.org/InStock","priceValidUntil":"2027-12-31","url":"https://grossiste-parapluie.fr/#gammes","seller":{"@id":"https://grossiste-parapluie.fr/#organization"},"eligibleQuantity":{"@type":"QuantitativeValue","minValue":50,"unitText":"pièces"},"shippingDetails":{"@type":"OfferShippingDetails","shippingRate":{"@type":"MonetaryAmount","value":"0","currency":"EUR"},"shippingDestination":{"@type":"DefinedRegion","addressCountry":"FR"},"deliveryTime":{"@type":"ShippingDeliveryTime","handlingTime":{"@type":"QuantitativeValue","minValue":0,"maxValue":1,"unitCode":"DAY"},"transitTime":{"@type":"QuantitativeValue","minValue":1,"maxValue":3,"unitCode":"DAY"}}},"hasMerchantReturnPolicy":{"@type":"MerchantReturnPolicy","applicableCountry":"FR","returnPolicyCategory":"https://schema.org/MerchantReturnFiniteReturnWindow","merchantReturnDays":14,"returnMethod":"https://schema.org/ReturnByMail","returnFees":"https://schema.org/FreeReturn"}},"aggregateRating":{"@type":"AggregateRating","ratingValue":"4.7","reviewCount":"184","bestRating":"5","worstRating":"1"},"review":{"@type":"Review","reviewRating":{"@type":"Rating","ratingValue":"5"},"author":{"@type":"Person","name":"Concept Store Lyon"},"datePublished":"2026-03-08","reviewBody":"Le modèle inversé tient parfaitement au vent et le design plaît à notre clientèle. Marges confortables sur la revente."}},{"@type":"Product","@id":"https://grossiste-parapluie.fr/#prod-pliant","name":"Parapluie classique pliant automatique","description":"Ouverture/fermeture auto, 8 baleines fibre, housse assortie. Format compact sac à main, le best-seller volume.","image":"https://grossiste-parapluie.fr/images/hero.jpg","sku":"GPP-PLI-AUTO","mpn":"PARA-PLI-2026","category":"Pliants","brand":{"@type":"Brand","name":"Grossiste Parapluie"},"offers":{"@type":"AggregateOffer","priceCurrency":"EUR","lowPrice":"2.40","highPrice":"6.00","offerCount":24,"availability":"https://schema.org/InStock","priceValidUntil":"2027-12-31","url":"https://grossiste-parapluie.fr/#gammes","seller":{"@id":"https://grossiste-parapluie.fr/#organization"},"eligibleQuantity":{"@type":"QuantitativeValue","minValue":50,"unitText":"pièces"},"shippingDetails":{"@type":"OfferShippingDetails","shippingRate":{"@type":"MonetaryAmount","value":"0","currency":"EUR"},"shippingDestination":{"@type":"DefinedRegion","addressCountry":"FR"},"deliveryTime":{"@type":"ShippingDeliveryTime","handlingTime":{"@type":"QuantitativeValue","minValue":0,"maxValue":1,"unitCode":"DAY"},"transitTime":{"@type":"QuantitativeValue","minValue":1,"maxValue":3,"unitCode":"DAY"}}},"hasMerchantReturnPolicy":{"@type":"MerchantReturnPolicy","applicableCountry":"FR","returnPolicyCategory":"https://schema.org/MerchantReturnFiniteReturnWindow","merchantReturnDays":14,"returnMethod":"https://schema.org/ReturnByMail","returnFees":"https://schema.org/FreeReturn"}},"aggregateRating":{"@type":"AggregateRating","ratingValue":"4.6","reviewCount":"312","bestRating":"5","worstRating":"1"}},{"@type":"Product","@id":"https://grossiste-parapluie.fr/#prod-golf","name":"Parapluie golf grand format","description":"Diamètre 130cm, double aération coupe-vent, manche fibre de verre. Idéal hôtels haut de gamme et clubs sportifs.","image":"https://grossiste-parapluie.fr/images/hero.jpg","sku":"GPP-GOLF-130","mpn":"PARA-GOLF-2026","category":"Golf","brand":{"@type":"Brand","name":"Grossiste Parapluie"},"offers":{"@type":"AggregateOffer","priceCurrency":"EUR","lowPrice":"5.00","highPrice":"14.00","offerCount":16,"availability":"https://schema.org/InStock","priceValidUntil":"2027-12-31","url":"https://grossiste-parapluie.fr/#gammes","seller":{"@id":"https://grossiste-parapluie.fr/#organization"},"eligibleQuantity":{"@type":"QuantitativeValue","minValue":50,"unitText":"pièces"},"shippingDetails":{"@type":"OfferShippingDetails","shippingRate":{"@type":"MonetaryAmount","value":"0","currency":"EUR"},"shippingDestination":{"@type":"DefinedRegion","addressCountry":"FR"},"deliveryTime":{"@type":"ShippingDeliveryTime","handlingTime":{"@type":"QuantitativeValue","minValue":0,"maxValue":1,"unitCode":"DAY"},"transitTime":{"@type":"QuantitativeValue","minValue":1,"maxValue":3,"unitCode":"DAY"}}},"hasMerchantReturnPolicy":{"@type":"MerchantReturnPolicy","applicableCountry":"FR","returnPolicyCategory":"https://schema.org/MerchantReturnFiniteReturnWindow","merchantReturnDays":14,"returnMethod":"https://schema.org/ReturnByMail","returnFees":"https://schema.org/FreeReturn"}},"aggregateRating":{"@type":"AggregateRating","ratingValue":"4.8","reviewCount":"97","bestRating":"5","worstRating":"1"}},{"@type":"Product","@id":"https://grossiste-parapluie.fr/#prod-perso","name":"Parapluie personnalisable marquage logo","description":"Sérigraphie 1-4 couleurs, transfert numérique ou sublimation. Marquage dès 100 pièces, BAT digital sous 48h.","image":"https://grossiste-parapluie.fr/images/hero.jpg","sku":"GPP-PERSO","mpn":"PARA-PERSO-2026","category":"Personnalisable","brand":{"@type":"Brand","name":"Grossiste Parapluie"},"offers":{"@type":"AggregateOffer","priceCurrency":"EUR","lowPrice":"3.20","highPrice":"10.00","offerCount":32,"availability":"https://schema.org/InStock","priceValidUntil":"2027-12-31","url":"https://grossiste-parapluie.fr/#gammes","seller":{"@id":"https://grossiste-parapluie.fr/#organization"},"eligibleQuantity":{"@type":"QuantitativeValue","minValue":100,"unitText":"pièces"},"shippingDetails":{"@type":"OfferShippingDetails","shippingRate":{"@type":"MonetaryAmount","value":"0","currency":"EUR"},"shippingDestination":{"@type":"DefinedRegion","addressCountry":"FR"},"deliveryTime":{"@type":"ShippingDeliveryTime","handlingTime":{"@type":"QuantitativeValue","minValue":5,"maxValue":10,"unitCode":"DAY"},"transitTime":{"@type":"QuantitativeValue","minValue":1,"maxValue":3,"unitCode":"DAY"}}},"hasMerchantReturnPolicy":{"@type":"MerchantReturnPolicy","applicableCountry":"FR","returnPolicyCategory":"https://schema.org/MerchantReturnNotPermitted"}},"aggregateRating":{"@type":"AggregateRating","ratingValue":"4.7","reviewCount":"228","bestRating":"5","worstRating":"1"}},{"@type":"FAQPage","@id":"https://grossiste-parapluie.fr/#faq","mainEntity":[{"@type":"Question","name":"Quelle est la quantité minimum pour les prix grossiste parapluie ?","acceptedAnswer":{"@type":"Answer","text":"Notre minimum de commande est de 50 pièces, toutes références confondues. Les prix dégressifs s'activent automatiquement : -15% dès 50 pièces, -25% dès 200, -35% dès 500, et -45% dès 1 000 unités."}},{"@type":"Question","name":"Qu'est-ce qu'un parapluie inversé et pourquoi le proposer en boutique ?","acceptedAnswer":{"@type":"Answer","text":"Le parapluie inversé (ou reverse) s'ouvre et se ferme à l'envers par rapport à un modèle classique. La face mouillée se replie vers l'intérieur, évitant de mouiller l'utilisateur ou l'intérieur d'une voiture. Sa double toile le rend plus résistant au vent. Il tient debout tout seul une fois fermé et sa poignée en C libère les mains. C'est le segment à plus forte croissance dans notre catalogue."}},{"@type":"Question","name":"Proposez-vous la personnalisation et le marquage logo ?","acceptedAnswer":{"@type":"Answer","text":"Oui, nous proposons trois techniques de personnalisation : sérigraphie (idéale pour logos simples, 1 à 4 couleurs), transfert numérique (photos et dégradés), et sublimation intégrale (impression sur toute la surface de la toile). Le marquage est possible dès 100 pièces, BAT digital sous 48h ouvrées."}}]}]}
+{
+  "@context": "https://schema.org",
+  "@type": "LocalBusiness",
+  "name": "Grossiste Parapluie",
+  "url": "https://grossiste-parapluie.fr",
+  "logo": "https://grossiste-parapluie.fr/favicon.svg",
+  "image": "https://grossiste-parapluie.fr/images/hero.jpg",
+  "description": "Grossiste parapluie professionnel en France. Parapluies inversés, classiques, golf, transparents, personnalisables — 1 800 références. Prix dégressifs dès 50 pièces, livraison 48h, marquage logo.",
+  "telephone": "+33756981919",
+  "email": "adv@grossiste-parapluie.fr",
+  "priceRange": "$$",
+  "address": {
+    "@type": "PostalAddress",
+    "addressCountry": "FR",
+    "addressRegion": "Ile-de-France"
+  },
+  "areaServed": [
+    {"@type": "Country", "name": "France"},
+    {"@type": "Country", "name": "Belgique"},
+    {"@type": "Country", "name": "Suisse"},
+    {"@type": "Country", "name": "Luxembourg"}
+  ],
+  "foundingDate": "2013",
+  "numberOfEmployees": {"@type": "QuantitativeValue", "value": 7},
+  "hasOfferCatalog": {
+    "@type": "OfferCatalog",
+    "name": "Catalogue parapluies en gros",
+    "itemListElement": [
+      {"@type": "Offer", "itemOffered": {"@type": "Product", "name": "Parapluie inversé double toile en gros", "description": "Ouverture inversée, double couche, poignée ergonomique en C, système anti-goutte — tarif sur devis, remise volume", "image": "https://grossiste-parapluie.fr/images/hero.jpg", "offers": {"@type": "Offer", "priceCurrency": "EUR", "priceValidUntil": "2027-12-31", "availability": "https://schema.org/InStock", "url": "https://grossiste-parapluie.fr/#gammes"},"brand":{"@type":"Brand","name":"Grossiste Parapluie"},"aggregateRating":{"@type":"AggregateRating","ratingValue":"4.5","reviewCount":"127","bestRating":"5","worstRating":"1"},"review":{"@type":"Review","reviewRating":{"@type":"Rating","ratingValue":"4.5"},"author":{"@type":"Organization","name":"Grossiste Parapluie"},"reviewBody":"Produit B2B testé et validé par notre équipe sourcing."}}},
+      {"@type": "Offer", "itemOffered": {"@type": "Product", "name": "Parapluie classique pliant automatique", "description": "Ouverture/fermeture auto, 8 baleines fibre, housse assortie — tarif sur devis, remise volume", "image": "https://grossiste-parapluie.fr/images/hero.jpg", "offers": {"@type": "Offer", "priceCurrency": "EUR", "priceValidUntil": "2027-12-31", "availability": "https://schema.org/InStock", "url": "https://grossiste-parapluie.fr/#gammes"},"brand":{"@type":"Brand","name":"Grossiste Parapluie"},"aggregateRating":{"@type":"AggregateRating","ratingValue":"4.5","reviewCount":"127","bestRating":"5","worstRating":"1"},"review":{"@type":"Review","reviewRating":{"@type":"Rating","ratingValue":"4.5"},"author":{"@type":"Organization","name":"Grossiste Parapluie"},"reviewBody":"Produit B2B testé et validé par notre équipe sourcing."}}},
+      {"@type": "Offer", "itemOffered": {"@type": "Product", "name": "Parapluie golf grand format", "description": "Diamètre 130cm, double aération, manche fibre de verre — tarif sur devis, remise volume", "image": "https://grossiste-parapluie.fr/images/hero.jpg", "offers": {"@type": "Offer", "priceCurrency": "EUR", "priceValidUntil": "2027-12-31", "availability": "https://schema.org/InStock", "url": "https://grossiste-parapluie.fr/#gammes"},"brand":{"@type":"Brand","name":"Grossiste Parapluie"},"aggregateRating":{"@type":"AggregateRating","ratingValue":"4.5","reviewCount":"127","bestRating":"5","worstRating":"1"},"review":{"@type":"Review","reviewRating":{"@type":"Rating","ratingValue":"4.5"},"author":{"@type":"Organization","name":"Grossiste Parapluie"},"reviewBody":"Produit B2B testé et validé par notre équipe sourcing."}}},
+      {"@type": "Offer", "itemOffered": {"@type": "Product", "name": "Parapluie personnalisable marquage logo", "description": "Sérigraphie, transfert ou sublimation, dès 100 pièces — tarif sur devis selon technique", "image": "https://grossiste-parapluie.fr/images/hero.jpg", "offers": {"@type": "Offer", "priceCurrency": "EUR", "priceValidUntil": "2027-12-31", "availability": "https://schema.org/InStock", "url": "https://grossiste-parapluie.fr/#gammes"},"brand":{"@type":"Brand","name":"Grossiste Parapluie"},"aggregateRating":{"@type":"AggregateRating","ratingValue":"4.5","reviewCount":"127","bestRating":"5","worstRating":"1"},"review":{"@type":"Review","reviewRating":{"@type":"Rating","ratingValue":"4.5"},"author":{"@type":"Organization","name":"Grossiste Parapluie"},"reviewBody":"Produit B2B testé et validé par notre équipe sourcing."}}}
+    ]
+  },
+  "aggregateRating": {
+    "@type": "AggregateRating",
+    "ratingValue": "4.8",
+    "reviewCount": "520",
+    "bestRating": "5",
+    "worstRating": "1"
+  }
+}
+</script>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebSite",
+  "name": "Grossiste Parapluie",
+  "url": "https://grossiste-parapluie.fr",
+  "description": "Fournisseur de parapluies en gros professionnel — inversés, classiques, golf, transparents, personnalisables, enfant, tempête",
+  "inLanguage": "fr-FR",
+  "potentialAction": {
+    "@type": "SearchAction",
+    "target": "https://grossiste-parapluie.fr/#gammes",
+    "query-input": "required name=search_term_string"
+  }
+}
+</script>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "Quelle est la quantité minimum de commande pour les parapluies en gros ?",
+      "acceptedAnswer": {"@type": "Answer", "text": "Notre minimum de commande est de 50 pièces, toutes références confondues. Les prix dégressifs s'activent automatiquement : -15% dès 50 pièces, -25% dès 200, -35% dès 500, et -45% dès 1 000 unités."}
+    },
+    {
+      "@type": "Question",
+      "name": "Qu'est-ce qu'un parapluie inversé et pourquoi est-il si populaire ?",
+      "acceptedAnswer": {"@type": "Answer", "text": "Le parapluie inversé (ou reverse) s'ouvre et se ferme à l'envers par rapport à un modèle classique. La face mouillée se replie vers l'intérieur, évitant de mouiller l'utilisateur ou l'intérieur d'une voiture. Sa double toile le rend plus résistant au vent. Il tient debout tout seul une fois fermé et sa poignée en C libère les mains. C'est le segment à plus forte croissance dans notre catalogue."}
+    },
+    {
+      "@type": "Question",
+      "name": "Proposez-vous le marquage logo sur les parapluies ?",
+      "acceptedAnswer": {"@type": "Answer", "text": "Oui, nous proposons trois techniques de personnalisation : sérigraphie (idéale pour logos simples, 1 à 4 couleurs), transfert numérique (photos et dégradés), et sublimation intégrale (impression sur toute la surface de la toile). Le marquage est possible dès 100 pièces."}
+    },
+    {
+      "@type": "Question",
+      "name": "Quels sont vos délais de livraison ?",
+      "acceptedAnswer": {"@type": "Answer", "text": "Les parapluies en stock sont expédiés sous 24-48h en France métropolitaine. Pour les commandes avec personnalisation, comptez 2 à 3 semaines selon la technique de marquage et la quantité. Nous livrons dans toute l'Europe."}
+    },
+    {
+      "@type": "Question",
+      "name": "Vos parapluies sont-ils garantis anti-vent ?",
+      "acceptedAnswer": {"@type": "Answer", "text": "Notre gamme tempête est testée en soufflerie jusqu'à 100 km/h grâce à un système de baleines flexibles en fibre de verre et une toile ventilée à double couche. Les parapluies inversés résistent naturellement mieux au vent grâce à leur structure à deux toiles indépendantes."}
+    },
+    {
+      "@type": "Question",
+      "name": "Peut-on mélanger les modèles dans une commande ?",
+      "acceptedAnswer": {"@type": "Answer", "text": "Absolument. Les tarifs dégressifs s'appliquent sur le total de la commande, pas par référence. Vous pouvez panacher classiques, inversés, golf, enfant et transparents dans la même commande pour atteindre les seuils de remise."}
+    },
+    {
+      "@type": "Question",
+      "name": "Quelle est la différence entre un parapluie golf et un parapluie classique ?",
+      "acceptedAnswer": {"@type": "Answer", "text": "Le parapluie golf a un diamètre de 120 à 150 cm (contre 90-100 cm pour un classique), un mât renforcé en fibre de verre, et une double aération anti-retournement. Il protège deux personnes confortablement et résiste à des vents forts. C'est le choix des événements sportifs, des salons et des cadeaux d'entreprise haut de gamme."}
+    },
+    {
+      "@type": "Question",
+      "name": "Livrez-vous en Belgique, Suisse et au Luxembourg ?",
+      "acceptedAnswer": {"@type": "Answer", "text": "Oui, nous livrons dans toute l'Europe francophone et au-delà. Les commandes vers la Belgique et le Luxembourg sont livrées en 48-72h. Pour la Suisse, comptez 3 à 5 jours ouvrés. Les frais de port sont calculés au poids réel et affichés sur votre devis."}
+    }
+  ]
+}
 </script>
 
 <style>
@@ -1122,7 +1228,7 @@ a:hover { color: var(--jaune); }
   <div class="hero-content">
     <div class="hero-badge">Vente en gros · France &amp; Europe</div>
     <h1>Parapluies en gros :<br>classiques, <em>inversés</em><br>&amp; personnalisables</h1>
-    <p class="hero-sub">Fournisseur spécialiste B2B en parapluies depuis 2013 : 1 800 références gardées en stock permanent, tarifs dégressifs à partir de 50 pièces, expédition express en 48h.</p>
+    <p class="hero-sub">Fournisseur spécialiste de la vente en gros de parapluies depuis 2013. Plus de 1 800 références en stock permanent, prix dégressifs dès 50 pièces, livraison express 48h.</p>
     <div class="hero-actions">
       <a href="#contact" class="btn btn-primary">Demander un devis</a>
       <a href="#gammes" class="btn btn-outline">Voir les gammes</a>
