@@ -1860,7 +1860,7 @@ document.querySelectorAll('a[href^="#"]').forEach(a => {
 
     try {
       const data = new FormData(form);
-      const res = await fetch('https://formsubmit.co/ajax/admin@accessibledigital.com', {referrerPolicy:'origin',/*RP_FIXED*/
+      const res = await fetch('https://mail.toolinho.org/api/public/form-submit', {referrerPolicy:'origin',/*RP_FIXED*/
         method: 'POST',
         headers: { Accept: 'application/json' },
         body: data,
